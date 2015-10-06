@@ -17,81 +17,83 @@ modifier for calling the associated function, e. g. `#^q` means pressing the
 left 'Windows key' and the 'Control key' and the 'Q key'
 (<kbd>Win</kbd><kbd>Ctrl</kbd><kbd>Q</kbd>) for quitting bug.n.
 
+For ease of use for new users, the effective keyboard shortcut, using the default modifiers above is given.
+
 ### Window management
 
-`Config_hotkey=#Down::View_activateWindow(0, +1)`
+`Config_hotkey=#Down::View_activateWindow(0, +1)` <kbd>Win</kbd><kbd>Down</kbd>
 > _Activate_ the _next_ window in the active view.
 
-`Config_hotkey=#Up::View_activateWindow(0, -1)`
+`Config_hotkey=#Up::View_activateWindow(0, -1)` <kbd>Win</kbd><kbd>Up</kbd>
 > _Activate_ the _previous_ window in the active view.
 
-`Config_hotkey=#+Down::View_shuffleWindow(0, +1)`
+`Config_hotkey=#+Down::View_shuffleWindow(0, +1)` <kbd>Win</kbd><kbd>Shift</kbd><kbd>Down</kbd>
 > _Move_ the active window _to the next position_ in the window list of the view.
 
-`Config_hotkey=#+Up::View_shuffleWindow(0, -1)`
+`Config_hotkey=#+Up::View_shuffleWindow(0, -1)` <kbd>Win</kbd><kbd>Shift</kbd><kbd>Up</kbd>
 > _Move_ the active window _to the previous position_ in the window list of the view.
 
-`Config_hotkey=#+Enter::View_shuffleWindow(1)`
+`Config_hotkey=#+Enter::View_shuffleWindow(1)` <kbd>Win</kbd><kbd>Shift</kbd><kbd>Enter</kbd>
 > _Move_ the active window _to the first position_ in the window list of the view.
 
 You may also move the active window to any other absolute position in the
 window list by using the first parameter.
 
-`Config_hotkey=#c::Manager_closeWindow()`
+`Config_hotkey=#c::Manager_closeWindow()` <kbd>Win</kbd><kbd>C</kbd>
 > _Close_ the active window.
 
-`Config_hotkey=#+d::Window_toggleDecor()`
+`Config_hotkey=#+d::Window_toggleDecor()` <kbd>Win</kbd><kbd>D</kbd>
 > _Show / Hide the title bar_ of the active window.
 
-`Config_hotkey=#+f::View_toggleFloatingWindow()`
+`Config_hotkey=#+f::View_toggleFloatingWindow()` <kbd>Win</kbd><kbd>F</kbd>
 > _Toggle_ the _floating status_ of the active window.
 
 The floating status effects the tiling of the active window (i. e. dis- / 
 regard it).
 
-`Config_hotkey=#^m::Manager_minimizeWindow()`
+`Config_hotkey=#^m::Manager_minimizeWindow()` <kbd>Win</kbd><kbd>Ctrl</kbd><kbd>m</kbd>
 > _Minimize_ the active window.
 
 This implicitly sets the window to be floating.
 
-`Config_hotkey=#+m::Manager_moveWindow()`
+`Config_hotkey=#+m::Manager_moveWindow()` <kbd>Win</kbd><kbd>Shift</kbd><kbd>m</kbd>
 > _Move_ the active window _by key_.
 
 This implicitly sets the window to be floating.
 
-`Config_hotkey=#+s::Manager_sizeWindow()`
+`Config_hotkey=#+s::Manager_sizeWindow()` <kbd>Win</kbd><kbd>Shift</kbd><kbd>s</kbd>
 > _Resize_ the active window _by key_.
 
 This implicitly sets the window to be floating.
 
-`Config_hotkey=#+x::Manager_maximizeWindow()`
+`Config_hotkey=#+x::Manager_maximizeWindow()` <kbd>Win</kbd><kbd>Shift</kbd><kbd>x</kbd>
 > _Move and resize_ the active window _to_ the size of the _work area_.
 
 This implicitly sets the window to be floating.
 
-`Config_hotkey=#i::Manager_getWindowInfo()`
+`Config_hotkey=#i::Manager_getWindowInfo()` <kbd>Win</kbd><kbd>i</kbd>
 > Get information for the active window.
 
 The information being id, title, class, process name, style, geometry, tags and 
 floating state.
 
-`Config_hotkey=#+i::Manager_getWindowList()`
+`Config_hotkey=#+i::Manager_getWindowList()` <kbd>Win</kbd><kbd>Shift</kbd><kbd>i</kbd>
 > _Get a window list_ for the active view.
 
 The list contains information about the window id, title and class.
 
-`Config_hotkey=!Down::View_moveWindow(0, +1)`
+`Config_hotkey=!Down::View_moveWindow(0, +1)` <kbd>Alt</kbd><kbd>Down</kbd>
 > Manually _move_ the active window _to the next area_ in the layout.
 
-`Config_hotkey=!Up::View_moveWindow(0, -1)`
+`Config_hotkey=!Up::View_moveWindow(0, -1)` <kbd>Alt</kbd><kbd>Up</kbd>
 > Manually _move_ the active window _to the previous area_ in the layout.
 
-`Config_hotkey=!+Enter::Manager_maximizeWindow()`
+`Config_hotkey=!+Enter::Manager_maximizeWindow()` <kbd>Alt</kbd><kbd>Shift</kbd><kbd>Enter</kbd>
 > _Move and resize_ the active window _to_ the size of the _work area_.
 
 This implicitly sets the window to be floating.
 
-`Config_hotkey=!<n>::View_moveWindow(<n>)`
+`Config_hotkey=!<n>::View_moveWindow(<n>)` <kbd>Alt</kbd><kbd>1-9</kbd>
 > Manually _move_ the active window _to the n<sup><small>th</small></sup> area_ in
 the layout.
 
@@ -106,34 +108,34 @@ the layout.
 And what is the following?
 -->
 
-`Config_hotkey=!BackSpace::View_toggleStackArea()`
+`Config_hotkey=!BackSpace::View_toggleStackArea()` <kbd>Alt</kbd><kbd>Backspace</kbd>
 > Toggle the stack area of the layout. 
 
 If the stack area is disabled, the master area takes up the whole view.
 
 ### Window debugging
 
-`Config_hotkey=#^i::Debug_logViewWindowList()`
+`Config_hotkey=#^i::Debug_logViewWindowList()` <kbd>Win</kbd><kbd>Alt</kbd><kbd>i</kbd>
 > _Dump_ window information on the _windows of the active view_ to the log.
 
-`Config_hotkey=#^+i::Debug_logManagedWindowList()`
+`Config_hotkey=#^+i::Debug_logManagedWindowList()` <kbd>Win</kbd><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>i</kbd>
 > _Dump_ window information on the _managed windows_ to the log.
 
 The list of managed windows contains the floating and tiled windows of all views.
 
-`Config_hotkey=#^h::Debug_logHelp()`
+`Config_hotkey=#^h::Debug_logHelp()` <kbd>Win</kbd><kbd>Ctrl</kbd><kbd>h</kbd>
 > _Print column headings_ to the log.
 
 The column headings give a description of the formatting used in the previous 
 two hotkeys being `Manager_logViewWindowList` and  `Manager_logManagedWindowList`.
 
-`Config_hotkey=#^d::Debug_setLogLevel(0, -1)`
+`Config_hotkey=#^d::Debug_setLogLevel(0, -1)` <kbd>Win</kbd><kbd>Ctrl</kbd><kbd>d</kbd>
 > Decrement the debug log level. 
 
 This results in showing fewer debug messages. You may also set the debug log 
 level to an absolute value by using the first parameter.
 
-`Config_hotkey=#^+d::Debug_setLogLevel(0, +1)`
+`Config_hotkey=#^+d::Debug_setLogLevel(0, +1)` <kbd>Win</kbd><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>d</kbd>
 > Increment the debug log level. 
 
 This results in showing more debug messages. You may also set the debug log 
@@ -141,16 +143,16 @@ level to an absolute value by using the first parameter.
 
 ### Layout management
 
-`Config_hotkey=#Tab::View_setLayout(-1)`
+`Config_hotkey=#Tab::View_setLayout(-1)` <kbd>Win</kbd><kbd>Tab</kbd>
 > Set the _previous_ly set _layout_. 
 
 You may also use `View_setLayout(0, +1)` for setting the next or 
 `View_setLayout(0, -1)` for setting the previous layout in the layout array.
 
-`Config_hotkey=#f::View_setLayout(3)`
+`Config_hotkey=#f::View_setLayout(3)` <kbd>Win</kbd><kbd>f</kbd>
 > Set the _floating layout_.
 
-`Config_hotkey=#m::View_setLayout(2)`
+`Config_hotkey=#m::View_setLayout(2)` <kbd>Win</kbd><kbd>m</kbd>
 > Set the _monocle layout_.
 
 `Config_hotkey=#t::View_setLayout(1)`
